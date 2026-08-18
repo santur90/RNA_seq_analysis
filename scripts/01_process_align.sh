@@ -12,7 +12,7 @@ star_index=$(get_config STAR_INDEX)
 min_length=$(get_config MIN_LENGTH)
 quality_cutoff=$(get_config QUALITY_CUTOFF)
 mkdir -p "$outdir/qc" "$outdir/trimmed" "$outdir/rrna" "$outdir/bam" "$outdir/logs"
-while IFS=$'\t' read -r sample condition batch r1 r2; do
+while IFS=$'\t' read -r sample _ _ r1 r2; do
   [[ "$sample" == "sample" || -z "$sample" ]] && continue
   [[ -f "$r1" && -f "$r2" ]] || { echo "FASTQ files missing for $sample" >&2; exit 1; }
   trim_galore --paired --gzip --fastqc --cores "$trim_threads" --quality "$quality_cutoff" --length "$min_length" \
