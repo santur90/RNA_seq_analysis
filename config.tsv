@@ -1,0 +1,15 @@
+THREADS	12
+TRIM_THREADS	6
+RRNA_INDEX	/path/to/rRNA/bowtie2/index
+STAR_INDEX	/path/to/star/index
+ANNOTATION_GTF	/path/to/annotation.gtf
+STRANDEDNESS	0
+MIN_MAPQ	10
+MIN_LENGTH	20
+QUALITY_CUTOFF	20
+CONDITION_COLUMN	condition
+CASE_LABEL	Ctrl
+CONTROL_LABEL	MDS
+BATCH_COLUMN	batch
+GSEA_GMT	data/genesets.gmt
+OUTDIR	results

@@ -1,0 +1,17 @@
+name: rnaseq
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - trim-galore
+  - fastqc
+  - multiqc
+  - bowtie2
+  - star
+  - samtools
+  - subread
+  - r-base
+  - bioconductor-deseq2
+  - bioconductor-apeglm
+  - bioconductor-pheatmap
+  - perl
